@@ -59,7 +59,7 @@ export default function SkillsPage() {
           <div style={{ display: 'flex', gap: 12, marginBottom: 56, justifyContent: 'center' }}>
             {Object.keys(tabs).map(t => (
               <button key={t} onClick={() => setActive(t)} style={{
-                padding: '10px 28px', borderRadius: 30, border: 'none',
+                padding: '10px 28px', borderRadius: 30,
                 fontWeight: 700, fontSize: 14, cursor: 'pointer',
                 transition: 'all 0.2s',
                 background: active === t ? tabs[t].color : 'var(--bg-card)',
