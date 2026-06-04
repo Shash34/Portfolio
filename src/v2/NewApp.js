@@ -10,7 +10,6 @@ import SkillsPage    from './pages/SkillsPage';
 import EducationPage from './pages/EducationPage';
 import ProjectsPage      from './pages/ProjectsPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
-import HackingPage   from './pages/HackingPage';
 import ContactPage      from './pages/ContactPage';
 import CertificatesPage from './pages/CertificatesPage';
 
