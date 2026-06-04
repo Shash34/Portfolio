@@ -18,7 +18,7 @@ function CompanyLogo({ logo, company }) {
           src={logo}
           alt={company}
           onError={() => setErrored(true)}
-          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }}
         />
       </div>
     );
@@ -141,7 +141,6 @@ const jobs = [
   {
     title: 'AI Engineering Extern',
     company: 'Extern via Outamation',
-    subtitle: 'AI Document Intelligence',
     date: 'May 2026 – Jun 2026',
     logo: externLogo,
     description: `• Engineered modular AI document intelligence pipelines in Python to process 200+ page mortgage files, combining PyMuPDF for digital PDF extraction and EasyOCR for scanned documents, with automatic routing logic to select the correct engine per document type\n• Built a RAG-based retrieval system using LlamaIndex, HuggingFace embeddings, and Claude Haiku, with chunk tuning (300-token chunks, 50-token overlap) and metadata filtering to improve retrieval precision across multi-document corpora\n• Deployed an end-to-end document Q&A interface using Gradio, featuring confidence scoring, source citations, and support for both digital and scanned PDFs`,
