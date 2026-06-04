@@ -1,0 +1,103 @@
+.overall-container{
+    justify-content: center;
+}
+
+.title h1{
+    font-size: 45px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Search Bar */
+
+.search-container{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.search-container input{
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 9px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 25px;
+  border-radius: 20px; /* rounded corners */
+  font-size: 16px;
+  width: 900px;
+  text-align: left;
+  color: black;
+}
+
+
+.search-container input::placeholder {
+    color: #6b4e65; /* a soft plum tone */
+}
+
+
+/* Headers */
+
+.cert-section{
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+
+
+
+/* Certificates */
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 32px;
+    justify-items: center;
+  }
+  
+  .certificate-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+}
+  
+  .certificate-title {
+    font-size: 20px;       /* Increase text size */
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;   /* Add spacing between title and image */
+    color: #5b2a86;          /* Or another color that contrasts well */
+    text-align: center;
+  }
+
+
+  .certificate-card img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  
+  
+  .certificate-card img:hover {
+    border: 2px solid white;
+    cursor: pointer;
+  }
+
+  
+  
+.zoomed-card {
+  z-index: 10;
+  position: relative;
+}

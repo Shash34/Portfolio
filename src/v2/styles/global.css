@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+:root {
+  --bg:              #F9FAFB;
+  --bg-card:         #FFFFFF;
+  --bg-input:        #FFFFFF;
+  --logo-bg:         #F9FAFB;
+  --text:            #111827;
+  --text-muted:      #6B7280;
+  --text-light:      #9CA3AF;
+  --accent:          #0D9488;
+  --accent-hover:    #0F766E;
+  --accent-light:    #F0FDFA;
+  --accent-mid:      #99F6E4;
+  --border:          #E5E7EB;
+  --border-light:    #F3F4F6;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow:          0 4px 16px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.05);
+  --nav-scrolled-bg: rgba(249,250,251,0.92);
+  --radius:          14px;
+  --radius-sm:       8px;
+  --nav-h:           68px;
+}
+
+[data-theme="dark"] {
+  --bg:              #0F172A;
+  --bg-card:         #1E293B;
+  --bg-input:        #1E293B;
+  --logo-bg:         #334155;
+  --text:            #F1F5F9;
+  --text-muted:      #94A3B8;
+  --text-light:      #64748B;
+  --accent:          #14B8A6;
+  --accent-hover:    #0D9488;
+  --accent-light:    #0D2D2A;
+  --accent-mid:      #134E4A;
+  --border:          #334155;
+  --border-light:    #1E293B;
+  --shadow-sm:       0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.2);
+  --shadow:          0 4px 16px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.2);
+  --shadow-lg:       0 12px 40px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3);
+  --nav-scrolled-bg: rgba(15,23,42,0.95);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── Layout ── */
+.v2-page {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+}
+
+.v2-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.v2-section {
+  padding: 80px 0;
+}
+
+/* ── Section header ── */
+.v2-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.v2-section-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.v2-section-sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+/* ── Buttons ── */
+.v2-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  text-decoration: none;
+}
+
+.v2-btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.v2-btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(13,148,136,0.3);
+}
+
+.v2-btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+
+.v2-btn-outline:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+/* ── Cards ── */
+.v2-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.v2-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+/* ── Tag/pill ── */
+.v2-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent-mid);
+}
+
+/* ── Divider ── */
+.v2-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}

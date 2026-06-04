@@ -1,0 +1,97 @@
+.description {
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 9px 8px rgba(0, 0, 0, 0.1);  border-radius: 16px;
+  padding: 20px;
+  max-width: 1000px;
+  height: 350px; /* or whatever height your design uses */
+  margin: 40px auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #1e3a8a;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.description h1 {
+  font-size: 16px; /* smaller text */
+  font-weight: 500;
+  margin: 0;
+}
+
+
+.logos-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  font-size: 40px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.logos-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #1e3a8a; /* Midnight blue border */
+  border-radius: 50%;
+  padding: 8px;
+  color: #1e3a8a; /* Midnight blue icon color */
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: all 0.3s ease;
+}
+
+.logos-contact-icon:hover {
+  border-color: #0f172a; /* Deep navy hover effect */
+  background-color: #e0e7ff; /* Soft blue-lavender hover background */
+  color: #0f172a; /* Icon hover color - dark navy */
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+
+
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.8); /* translucent white */
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #4b0082; /* deep purple for text */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #5a189a;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fdfcff;
+}
+
+.contact-form button {
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #9333ea;
+}
