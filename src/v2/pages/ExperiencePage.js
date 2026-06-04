@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import griffissLogo from '../../images/griffiss-logo.png';
 import triangleLogo from '../../images/triangle-cyber.png';
 import cinemarkLogo from '../../images/cinemark.png';
+import externLogo from '../../images/Externlogo.png';
 
 function CompanyLogo({ logo, company }) {
   const [errored, setErrored] = useState(false);
-  if (!errored) {
+  if (logo && !errored) {
     return (
       <div style={{
         width: 72, height: 72, borderRadius: 16,
@@ -34,7 +35,7 @@ function CompanyLogo({ logo, company }) {
   );
 }
 
-function WorkCard({ title, company, date, logo, description }) {
+function WorkCard({ title, company, subtitle, date, logo, description }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -61,6 +62,7 @@ function WorkCard({ title, company, date, logo, description }) {
           <CompanyLogo logo={logo} company={company} />
           <div style={{ fontWeight: 800, fontSize: 17, color: 'var(--text)', lineHeight: 1.3 }}>{title}</div>
           <div style={{ fontWeight: 600, fontSize: 14, color: 'var(--accent)' }}>{company}</div>
+          {subtitle && <div style={{ fontSize: 12, color: 'var(--text-muted)', fontStyle: 'italic' }}>{subtitle}</div>}
           <div style={{ fontSize: 12, color: 'var(--text-light)', background: 'var(--border-light)', padding: '4px 12px', borderRadius: 20 }}>{date}</div>
           <button onClick={() => setFlipped(true)} style={{
             marginTop: 12, padding: '9px 24px', borderRadius: 30,
@@ -88,12 +90,16 @@ function WorkCard({ title, company, date, logo, description }) {
           color: '#fff',
         }}>
           <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>{title}</div>
-          <div style={{ fontSize: 12, opacity: 0.8, marginBottom: 20 }}>{company} · {date}</div>
-          <div style={{ flex: 1, fontSize: 13, lineHeight: 1.8, opacity: 0.95, whiteSpace: 'pre-line', overflowY: 'auto', wordBreak: 'break-word' }}>
+          <div style={{ fontSize: 12, opacity: 0.8, marginBottom: 12 }}>{company} · {date}</div>
+          <div className="card-scroll" style={{
+            flex: 1, fontSize: 12, lineHeight: 1.7, opacity: 0.95,
+            whiteSpace: 'pre-line', overflowY: 'auto', wordBreak: 'break-word',
+            paddingRight: 4,
+          }}>
             {description || 'More details coming soon.'}
           </div>
           <button onClick={() => setFlipped(false)} style={{
-            marginTop: 16, padding: '8px 20px', borderRadius: 30,
+            marginTop: 12, padding: '8px 20px', borderRadius: 30,
             border: '1.5px solid rgba(255,255,255,0.6)',
             background: 'transparent', color: '#fff',
             fontWeight: 600, fontSize: 13, cursor: 'pointer',
@@ -106,11 +112,26 @@ function WorkCard({ title, company, date, logo, description }) {
           </button>
         </div>
       </div>
+
+      <style>{`
+        .card-scroll::-webkit-scrollbar { width: 4px; }
+        .card-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 4px; }
+        .card-scroll::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 4px; }
+        .card-scroll::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.65); }
+      `}</style>
     </div>
   );
 }
 
 const jobs = [
+  {
+    title: 'AI Engineering Extern',
+    company: 'Extern via Outamation',
+    subtitle: 'AI Document Intelligence',
+    date: 'May 2026 – Jun 2026',
+    logo: externLogo,
+    description: `• Engineered modular AI document intelligence pipelines in Python to process 200+ page mortgage files, combining PyMuPDF for digital PDF extraction and EasyOCR for scanned documents, with automatic routing logic to select the correct engine per document type\n• Built a RAG-based retrieval system using LlamaIndex, HuggingFace embeddings, and Claude Haiku, with chunk tuning (300-token chunks, 50-token overlap) and metadata filtering to improve retrieval precision across multi-document corpora\n• Deployed an end-to-end document Q&A interface using Gradio, featuring confidence scoring, source citations, and support for both digital and scanned PDFs`,
+  },
   {
     title: 'Viceroy Envoy Cybersecurity Intern',
     company: 'Griffiss Institute',
@@ -130,7 +151,7 @@ const jobs = [
     company: 'Cinemark',
     date: 'Aug 2025 – Present',
     logo: cinemarkLogo,
-    description: `• Provided customer service at box office, concessions, and ticket scanning\n\n• Maintained cleanliness and safety standards\n\n• Assisted guests and resolved issues in a fast-paced environment\n\n• Operated POS systems and handled transactions accurately`,
+    description: `• Provided customer service at box office, concessions, and ticket scanning\n• Maintained cleanliness and safety standards\n• Assisted guests and resolved issues in a fast-paced environment\n• Operated POS systems and handled transactions accurately`,
   },
 ];
 
