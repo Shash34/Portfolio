@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import image1 from '../../images/image1.jpg';
 
 export default function About() {
   return (
@@ -15,14 +14,6 @@ export default function About() {
 
             {/* Photo + socials */}
             <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-              <div style={{
-                width: 200, height: 200, borderRadius: '50%',
-                border: '3px solid var(--accent-mid)',
-                overflow: 'hidden',
-                boxShadow: '0 0 0 6px var(--accent-light)',
-              }}>
-                <img src={image1} alt="Shashank" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
-              </div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 18, textAlign: 'center', color: 'var(--text)' }}>Shashank Kesavamatham</div>
                 <div style={{ fontSize: 13, color: 'var(--text-muted)', textAlign: 'center', marginTop: 4 }}>CSE · Ohio State</div>
