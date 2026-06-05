@@ -100,7 +100,7 @@ export default function EducationPage() {
                     padding: '14px 20px',
                     background: open === c.name ? 'var(--accent-light)' : '#fff',
                   }}>
-                    <span style={{ fontWeight: 600, fontSize: 15, color: 'var(--text)' }}>{c.name}</span>
+                    <span style={{ fontWeight: 600, fontSize: 15, color: 'var(--accent)' }}>{c.name}</span>
                     <span style={{ fontSize: 18, color: 'var(--accent)', fontWeight: 700 }}>{open === c.name ? '−' : '+'}</span>
                   </div>
                   {open === c.name && (

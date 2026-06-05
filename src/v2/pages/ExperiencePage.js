@@ -168,7 +168,7 @@ export default function ExperiencePage() {
           </div>
 
           <div style={{ marginTop: 56, textAlign: 'center' }}>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="v2-btn v2-btn-outline">
+            <a href="/Shashank Kesavamatham_Resume.pdf" target="_blank" rel="noreferrer" className="v2-btn v2-btn-outline">
               Full Resume ↗
             </a>
           </div>
