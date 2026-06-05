@@ -69,7 +69,7 @@ export default function EducationPage() {
                   { label: 'Degree',     value: 'B.S. Computer Science & Engineering' },
                   { label: 'Graduating', value: 'Summer 2027'   },
                   { label: 'Status',     value: 'In Progress'   },
-                  { label: 'Standing',   value: 'Junior'        },
+                  { label: 'Standing',   value: 'Senior'        },
                 ].map(s => (
                   <div key={s.label} className="v2-card" style={{ padding: '18px 22px' }}>
                     <div style={{ fontSize: 11, color: 'var(--text-light)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 6 }}>{s.label}</div>

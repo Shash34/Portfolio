@@ -86,7 +86,7 @@ export default function Navbar() {
             {dark ? '☀' : '☾'}
           </button>
 
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" style={{
+          <a href="/Shashank Kesavamatham_Resume.pdf" target="_blank" rel="noreferrer" style={{
             marginLeft: 8, fontSize: 13, fontWeight: 600,
             padding: '7px 18px', borderRadius: 30,
             background: 'var(--accent)', color: '#fff',
