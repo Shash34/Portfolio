@@ -76,7 +76,7 @@ export default function Home() {
 
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 40 }}>
               <Link to="/projects" className="v2-btn v2-btn-primary">View Projects →</Link>
-              <a href="/resume.pdf" target="_blank" rel="noreferrer" className="v2-btn v2-btn-outline">Download Resume ↗</a>
+              <a href="/Shashank Kesavamatham_Resume.pdf" target="_blank" rel="noreferrer" className="v2-btn v2-btn-outline">Download Resume ↗</a>
             </div>
 
             <div style={{ display: 'flex', gap: 16 }}>

@@ -134,7 +134,7 @@ const jobs = [
   {
     title: 'Cybersecurity Intern',
     company: 'Triangle Cyber',
-    date: 'June 2026 – Present',
+    date: 'May 2026 – Present',
     logo: triangleLogo,
     description: `More details coming soon.`,
   },
@@ -148,7 +148,7 @@ const jobs = [
   {
     title: 'Crew Member',
     company: 'Cinemark',
-    date: 'Aug 2025 – Present',
+    date: 'Mar 2024 – Aug 2024',
     logo: cinemarkLogo,
     description: `• Provided customer service at box office, concessions, and ticket scanning\n• Maintained cleanliness and safety standards\n• Assisted guests and resolved issues in a fast-paced environment\n• Operated POS systems and handled transactions accurately`,
   },
