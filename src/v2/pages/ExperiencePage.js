@@ -132,7 +132,7 @@ const jobs = [
     description: `More details coming soon.`,
   },
   {
-    title: 'Cybersecurity Intern',
+    title: 'Cloud Security Intern',
     company: 'Triangle Cyber',
     date: 'May 2026 – Present',
     logo: triangleLogo,
