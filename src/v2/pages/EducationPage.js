@@ -38,12 +38,13 @@ export default function EducationPage() {
               <div style={{ fontSize: 13, color: '#99f6e4' }}>Columbus, OH</div>
             </div>
             <div style={{ textAlign: 'right' }}>
-              <div style={{
+              {/*
+                <div style={{
                 fontSize: 12, background: '#fde68a', color: '#92400e',
                 borderRadius: 20, padding: '4px 14px', fontWeight: 700,
               }}>
                 Dean's List 2025
-              </div>
+              </div> */}
             </div>
           </div>
 

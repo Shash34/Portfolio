@@ -27,11 +27,11 @@ function Starburst() {
 }
 
 const sections = [
-  { to: '/about',      label: 'About Me',        desc: 'Background, interests, and what drives me.',       icon: '👤' },
-  { to: '/experience', label: 'Experience',       desc: 'Internships and roles I\'ve held.',                 icon: '💼' },
-  { to: '/skills',     label: 'Skills',           desc: 'Languages, tools, and concepts I work with.',      icon: '🛠️' },
-  { to: '/projects',   label: 'Projects',         desc: 'Things I\'ve built.',                              icon: '🚀' },
-  { to: '/education',  label: 'Education',        desc: 'Ohio State CSE, cybersecurity focus.', icon: '🎓' },
+  { to: '/about',      label: 'About Me',        desc: 'Background, interests, and what drives me.' },
+  { to: '/experience', label: 'Experience',       desc: 'Internships and roles I\'ve held.' },
+  { to: '/skills',     label: 'Skills',           desc: 'Languages, tools, and concepts I work with.'},
+  { to: '/projects',   label: 'Projects',         desc: 'Things I\'ve built.'},
+  { to: '/education',  label: 'Education',        desc: 'Ohio State CSE, cybersecurity focus.'},
 ];
 
 export default function Home() {

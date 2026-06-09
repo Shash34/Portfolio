@@ -43,19 +43,19 @@ export default function About() {
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 20 }}>
               {[
                 {
-                  heading: '👋 Background',
+                  heading: 'Background',
                   text: 'I am a Computer Science & Engineering student at The Ohio State University, expected to graduate in Summer 2027, with a strong interest in Cybersecurity and AI — particularly in cloud security and security operations.',
                 },
                 {
-                  heading: '🔐 Cybersecurity',
+                  heading: 'Cybersecurity',
                   text: 'My interest in cybersecurity developed through hands-on platforms such as TryHackMe and Hack The Box, where I gained experience thinking from an attacker\'s perspective and analyzing real-world security scenarios.',
                 },
                 {
-                  heading: '🎯 Goals',
+                  heading: 'Goals',
                   text: 'I am currently seeking internship opportunities for Summer 2027 and beyond, where I can continue building technical depth, contribute to impactful security work, and grow within the industry.',
                 },
                 {
-                  heading: '🎵 Outside Tech',
+                  heading: 'Outside Tech',
                   text: 'Outside of tech, I enjoy working out and listening to indie and alternative R&B. Some of my favorite artists include Giveon and Bruno Mars.',
                 },
               ].map(({ heading, text }) => (
