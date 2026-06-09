@@ -108,9 +108,7 @@ export default function Home() {
               width: 160, height: 160, borderRadius: '50%',
               background: 'linear-gradient(135deg, var(--accent-light), var(--accent-mid))',
               border: '2px solid var(--accent-mid)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
             }}>
-              <span style={{ fontSize: 64 }}>👨‍💻</span>
             </div>
           </div>
         </div>
