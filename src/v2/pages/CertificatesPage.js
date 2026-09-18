@@ -4,9 +4,6 @@ import FreeCodeCamp from '../../images/Freecodecamp.png';
 import CodePath from '../../images/CodePathCYB101.png';
 
 const certificates = [
-  { title: 'CompTIA Security+',        category: 'CompTIA',  tags: ['comptia', 'security'],    image: null   },
-  { title: 'CompTIA Network+',         category: 'CompTIA',  tags: ['comptia', 'network'],     image: null   },
-  { title: 'CompTIA PenTest+',         category: 'CompTIA',  tags: ['comptia', 'pentest'],     image: null   },
   { title: 'BDAA 1st Place',           category: 'Other',    tags: ['bdaa', 'award'],          image: BDAA   },
   { title: 'FreeCodeCamp — AI & ML',   category: 'Other',    tags: ['freecodecamp', 'ai'],     image: FreeCodeCamp },
   { title: 'CodePath Cybersecurity',   category: 'Other',    tags: ['codepath', 'cyber'],      image: CodePath },
@@ -98,16 +95,18 @@ export default function CertificatesPage() {
             />
           </div>
 
-          {comptia.length > 0 && (
-            <div style={{ marginBottom: 56 }}>
-              <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)', marginBottom: 24, paddingBottom: 12, borderBottom: '2px solid var(--border)' }}>
-                CompTIA
-              </h3>
+          <div style={{ marginBottom: 56 }}>
+            <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)', marginBottom: 24, paddingBottom: 12, borderBottom: '2px solid var(--border)' }}>
+              CompTIA
+            </h3>
+            {comptia.length > 0 ? (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 20 }}>
                 {comptia.map(c => <CertCard key={c.title} {...c} />)}
               </div>
-            </div>
-          )}
+            ) : (
+              <p style={{ color: 'var(--text-muted)', fontSize: 14, fontStyle: 'italic' }}>More certifications coming soon.</p>
+            )}
+          </div>
 
           {other.length > 0 && (
             <div>

@@ -6,6 +6,9 @@ import Navbar        from './components/Navbar';
 import Home          from './pages/Home';
 import About         from './pages/About';
 import ExperiencePage from './pages/ExperiencePage';
+import ViceroyDetailPage from './pages/ViceroyDetailPage';
+import TriangleCyberDetailPage from './pages/TriangleCyberDetailPage';
+import ExternDetailPage from './pages/ExternDetailPage';
 import SkillsPage    from './pages/SkillsPage';
 import EducationPage from './pages/EducationPage';
 import ProjectsPage      from './pages/ProjectsPage';
@@ -21,6 +24,9 @@ export default function NewApp() {
         <Route path="/"           element={<Home />}           />
         <Route path="/about"      element={<About />}          />
         <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/experience/viceroy" element={<ViceroyDetailPage />} />
+        <Route path="/experience/triangle-cyber" element={<TriangleCyberDetailPage />} />
+        <Route path="/experience/extern" element={<ExternDetailPage />} />
         <Route path="/skills"     element={<SkillsPage />}     />
         <Route path="/education"  element={<EducationPage />}  />
         <Route path="/projects"        element={<ProjectsPage />}      />

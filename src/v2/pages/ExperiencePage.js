@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import griffissLogo from '../../images/griffiss-logo.png';
 import triangleLogo from '../../images/triangle-cyber.png';
 import cinemarkLogo from '../../images/cinemark.png';
@@ -35,7 +36,7 @@ function CompanyLogo({ logo, company }) {
   );
 }
 
-function WorkCard({ title, company, subtitle, date, logo, description }) {
+function WorkCard({ title, company, subtitle, date, logo, description, moreInfoPath }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -98,18 +99,37 @@ function WorkCard({ title, company, subtitle, date, logo, description }) {
           }}>
             {description || 'More details coming soon.'}
           </div>
-          <button onClick={() => setFlipped(false)} style={{
-            marginTop: 12, padding: '8px 20px', borderRadius: 30,
-            border: '1.5px solid rgba(255,255,255,0.6)',
-            background: 'transparent', color: '#fff',
-            fontWeight: 600, fontSize: 13, cursor: 'pointer',
-            transition: 'all 0.2s', alignSelf: 'flex-start',
-          }}
-            onMouseEnter={e => e.target.style.background = 'rgba(255,255,255,0.15)'}
-            onMouseLeave={e => e.target.style.background = 'transparent'}
-          >
-            ← Flip Back
-          </button>
+          <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+            <button onClick={() => setFlipped(false)} style={{
+              flex: moreInfoPath ? 1 : 'none',
+              padding: '8px 10px', borderRadius: 30,
+              border: '1.5px solid rgba(255,255,255,0.6)',
+              background: 'transparent', color: '#fff',
+              fontWeight: 600, fontSize: 12, cursor: 'pointer',
+              transition: 'all 0.2s', whiteSpace: 'nowrap',
+            }}
+              onMouseEnter={e => e.target.style.background = 'rgba(255,255,255,0.15)'}
+              onMouseLeave={e => e.target.style.background = 'transparent'}
+            >
+              ← Flip Back
+            </button>
+            {moreInfoPath && (
+              <Link to={moreInfoPath} style={{
+                flex: 1,
+                padding: '8px 10px', borderRadius: 30,
+                border: '1.5px solid var(--accent)',
+                background: 'var(--accent)', color: '#fff',
+                fontWeight: 600, fontSize: 12, cursor: 'pointer',
+                transition: 'all 0.2s', whiteSpace: 'nowrap',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              }}
+                onMouseEnter={e => e.currentTarget.style.background = 'var(--accent-hover)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'var(--accent)'}
+              >
+                More Info →
+              </Link>
+            )}
+          </div>
         </div>
       </div>
 
@@ -125,11 +145,12 @@ function WorkCard({ title, company, subtitle, date, logo, description }) {
 
 const jobs = [
   {
-    title: 'Viceroy Envoy Cybersecurity Intern',
+    title: 'Viceroy Envoy Cybersecurity Engineering Intern',
     company: 'Griffiss Institute',
-    date: 'June 2026 – Present',
+    date: 'June 2026 – August 2026',
     logo: griffissLogo,
     description: `More details coming soon.`,
+    moreInfoPath: '/experience/viceroy',
   },
   {
     title: 'Cloud Security Intern',
@@ -137,6 +158,7 @@ const jobs = [
     date: 'May 2026 – Present',
     logo: triangleLogo,
     description: `More details coming soon.`,
+    moreInfoPath: '/experience/triangle-cyber',
   },
   {
     title: 'AI Engineering Extern',
@@ -144,6 +166,7 @@ const jobs = [
     date: 'May 2026 – Jun 2026',
     logo: externLogo,
     description: `• Engineered modular AI document intelligence pipelines in Python to process 200+ page mortgage files, combining PyMuPDF for digital PDF extraction and EasyOCR for scanned documents, with automatic routing logic to select the correct engine per document type\n• Built a RAG-based retrieval system using LlamaIndex, HuggingFace embeddings, and Claude Haiku, with chunk tuning (300-token chunks, 50-token overlap) and metadata filtering to improve retrieval precision across multi-document corpora\n• Deployed an end-to-end document Q&A interface using Gradio, featuring confidence scoring, source citations, and support for both digital and scanned PDFs`,
+    moreInfoPath: '/experience/extern',
   },
   {
     title: 'Crew Member',

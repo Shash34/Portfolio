@@ -2,8 +2,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 
-function ProjectCard({ slug, title, description, tags, live, github, wip, highlights }) {
+const BADGE_STYLES = {
+  red:  { background: '#FEF2F2', color: '#B91C1C', border: '1px solid #FECACA' },
+  gold: { background: '#FFFBEB', color: '#92400E', border: '1px solid #FDE68A' },
+};
+
+function ProjectCard({ slug, title, description, tags, live, github, wip, highlights, detailPath, badge }) {
   const [hovered, setHovered] = useState(false);
+  const cardBadge = badge || (wip ? { label: 'In Progress', color: 'red' } : null);
+
   return (
     <div
       className="v2-card"
@@ -15,9 +22,9 @@ function ProjectCard({ slug, title, description, tags, live, github, wip, highli
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
           {tags.map(t => <span key={t} className="v2-tag" style={{ fontSize: 11 }}>{t}</span>)}
         </div>
-        {wip && (
-          <span style={{ fontSize: 11, fontWeight: 700, background: '#FEF3C7', color: '#92400E', padding: '3px 10px', borderRadius: 20, border: '1px solid #FDE68A', flexShrink: 0 }}>
-            In Progress
+        {cardBadge && (
+          <span style={{ fontSize: 11, fontWeight: 700, padding: '3px 10px', borderRadius: 20, flexShrink: 0, ...BADGE_STYLES[cardBadge.color] }}>
+            {cardBadge.label}
           </span>
         )}
       </div>
@@ -43,7 +50,7 @@ function ProjectCard({ slug, title, description, tags, live, github, wip, highli
       )}
 
       <div style={{ display: 'flex', gap: 10, marginTop: 'auto', flexWrap: 'wrap' }}>
-        <Link to={`/projects/${slug}`} className="v2-btn v2-btn-outline" style={{ fontSize: 13, padding: '8px 20px' }}>
+        <Link to={detailPath || `/projects/${slug}`} className="v2-btn v2-btn-outline" style={{ fontSize: 13, padding: '8px 20px' }}>
           Learn More →
         </Link>
         {live && (
